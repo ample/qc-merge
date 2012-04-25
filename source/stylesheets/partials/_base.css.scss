@@ -33,9 +33,11 @@ $purple:                           #7a43b6;
       
 // Typography                    
 $baseFontSize:                     13px;
-$baseFontFamily:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseFontFamily:                  "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, "Times New Roman", serif;
 $baseLineHeight:                   18px;
 $textColor:                        #024475;
+
+$headlineFontFamily:               "ff-meta-web-pro-1", "ff-meta-web-pro-2", "Helvetica Neue", helvetica, arial, sans-serif;
 
 // Buttons                         
 $primaryButtonBackground:          $linkColor;
