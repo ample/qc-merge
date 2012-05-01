@@ -1,3 +1,75 @@
 .container {
-  @include grid_background();
+  @include susy-grid-background;
 }
+
+// Global Layout Styles
+// --------------------------------------------------
+
+body {
+  width: 100%;
+  @include background(#F7F7F7 image-url('backgrounds/bg-page.png') repeat top left);
+  
+  font-family: $baseFontFamily;
+  color: $textColor;
+  font-size: 100%;
+  line-height: $baseLineHeight;
+}
+
+
+// Typography Styles
+// --------------------------------------------------
+
+h1 {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  width: 825px;
+  height: 125px;
+  background: image-url('parts/img-logo.png') no-repeat top left;
+  margin: 0 auto;
+}
+
+// Layout Styles
+// --------------------------------------------------
+
+
+/*** Event Section ***/
+
+.event {
+  border-top: 4px solid #FFF;
+  border-bottom: 4px solid #FFF;
+  @include background(image-url('backgrounds/bg-bar.png') repeat top left);
+}
+
+.event-listing {
+  @include full;
+}
+
+.event-description {
+  @include columns(4, 8);
+}
+
+.event-time {
+  padding-top: calc-em(50px, $baseFontSize);
+  @include background(image-url('parts/icons/ico-time.png') no-repeat top left);
+  @include columns(2, 8);
+}
+
+.event-location {
+  padding-top: calc-em(50px, $baseFontSize);
+  @include background(image-url('parts/icons/ico-location.png') no-repeat top left);
+  @include columns(2, 8);
+  @include omega(8);
+}
+
+/*** Footer ***/
+
+.l-footer {
+  border-top: 2px solid #333;
+  @include background(image-url('backgrounds/bg-footer-texture.png') repeat top left);
+  
+  .container {
+    @include background(image-url('backgrounds/bg-state.png') no-repeat top right);
+  }
+} //footer

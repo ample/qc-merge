@@ -1,4 +1,5 @@
 require 'compass'
+require 'susy'
 require 'bootstrap-sass'
 
 # Methods defined in the helpers block are available in templates
