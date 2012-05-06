@@ -40,7 +40,19 @@
 				
 		<footer class="l-footer">
       <div class="container">
-        &copy; Copyright <%= copyright_years(2012) %>, Ample
+        <div class="org" itemprop="affiliation" title="Organization" itemscope="itemscope" itemtype="http://www.data-vocabulary.org/Organization/">
+        	<div class="vcard">
+        		<span class="organization-name fn" itemprop="name">Ample</span>
+        		<div class="adr" itemprop="address" itemscope="itemscope" itemtype="http://data-vocabulary.org/Address/">
+        			<!-- Address --><span class="street-address" itemprop="street-address">200 W. 4th Street</span>
+        			<!-- City --><span class="locality" itemprop="locality">Cincinnati</span>,
+        			<!-- State --><abbr class="region" itemprop="region" title="Ohio">OH</abbr>
+        			<!-- Zip --><abbr class="postal-code" itemprop="postal-code" title="45209">45209</abbr>
+        		</div> <!--/ .adr -->
+        	</div> <!--/ .vcard -->
+        </div> <!--/ .org -->
+        
+        <div class="copyright">&copy; Copyright <%= copyright_years(2012) %>, Ample</div>
       </div>
 		</footer>
 		<!-- /site-footer -->

@@ -25,6 +25,40 @@
 	}
 }
 
+@mixin col-border-left($border-width, $border-color) {
+  border-right: none;
+  border-left: $border-width solid $border-color;
+  @if $border-width == 1px {
+    $marginLeft: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2);
+    $paddingLeft: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - $border-width;
+    padding-left: $paddingLeft;
+    margin-left: $marginLeft;
+  } @else {
+    $paddingLeft: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - ($border-width / 2);
+    $marginLeft: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - ($border-width / 2);
+    padding-left: $paddingLeft;
+    margin-left: $marginLeft;
+  }
+} //col-border-right
+
+
+@mixin col-border-right($border-width, $border-color) {
+  border-left: none;
+  border-right: $border-width solid $border-color;
+  @if $border-width == 1px {
+    $marginRight: ($gridColumnWidth / 2);
+    $paddingRight: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - $border-width;
+    padding-right: calc-em($paddingRight, $baseFontSize);
+    margin-right: calc-em($marginRight, $baseFontSize);
+  } @else {
+    $paddingRight: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - ($border-width / 2);
+    $marginRight: ($gridColumnWidth / 2) - ($border-width / 2);
+    padding-right: $paddingRight;
+    margin-right: $marginRight;
+  }
+} //col-border-right
+
+
 // ------------------------------------------- //
 //    GRID BACKGROUND     										 //
 // ------------------------------------------- //

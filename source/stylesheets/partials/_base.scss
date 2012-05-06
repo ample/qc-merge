@@ -6,8 +6,11 @@
 // --------------------------------------------------
 
 // Links
-$linkColor:                        #08c;
-$linkColorHover:                   darken($linkColor, 15%);
+$linkColor:                        #f10010;
+$linkHoverColor:                   darken($linkColor, 5%);
+$linkActiveColor:                  darken($linkColor, 5%);
+$linkVisitedColor:                 $linkColor;
+$linkFocusColor:                   darken($linkColor, 5%);
 
 // Grays
 $black:                            #000;
@@ -29,18 +32,18 @@ $pink:                             #c3325f;
 $purple:                           #7a43b6;
       
 // Typography                    
-$baseFontSize:                     13px;
-$baseFontFamily:                  "ff-meta-serif-web-pro-1", "ff-meta-serif-web-pro-2", Georgia, Times, "Times New Roman", serif;
-$baseLineHeight:                   18px;
-$textColor:                        #024475;
+$baseFontSize:                     16px;
+$baseFontFamily:                  "ff-meta-serif-web-pro", Georgia, Times, "Times New Roman", serif;
+$baseLineHeight:                   24px;
+$textColor:                        #333;
 
-$headlineFontFamily:               "ff-meta-web-pro-1", "ff-meta-web-pro-2", "Helvetica Neue", helvetica, arial, sans-serif;
+$headlineFontFamily:               "ff-meta-web-pro", "Helvetica Neue", helvetica, arial, sans-serif;
 
 // Buttons                         
 $primaryButtonBackground:          $linkColor;
 
 //Borders
-$borderColor:                      #b3cee0;
+$borderColor:                      #b2b2b2;
 
 // COMPONENT VARIABLES
 // --------------------------------------------------
