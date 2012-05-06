@@ -11,8 +11,18 @@ helpers do
     if start_year == end_year
       start_year.to_s
     else
-      start_year.to_s + '-' + end_year.to_s
+      start_year.to_s + '-' + end_year.to_ss
     end
   end
+  
+end
+
+# Build-specific configuration
+configure :build do
+ 
+  
+  # Minify Javascript on build
+  activate :minify_javascript
+  
   
 end
