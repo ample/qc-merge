@@ -21,8 +21,9 @@ end
 configure :build do
  
   
-  # Minify Javascript on build
-  activate :minify_javascript
+  # Use relative URLs
+  activate :relative_assets
+  
   
   
 end

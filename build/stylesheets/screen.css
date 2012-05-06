@@ -3761,7 +3761,7 @@ a.thumbnail:hover {
 /* line 8, partials/_global.scss */
 body {
   width: 100%;
-  background: #f7f7f7 url('/images/backgrounds/bg-page.png') repeat top left;
+  background: #f7f7f7 url('../images/backgrounds/bg-page.png') repeat top left;
   font-family: "ff-meta-serif-web-pro", Georgia, Times, "Times New Roman", serif;
   color: #333333;
   font-size: 100%;
@@ -3780,7 +3780,7 @@ h1 {
   display: block;
   width: 825px;
   height: 125px;
-  background: url('/images/parts/img-logo.png') no-repeat top left;
+  background: url('../images/parts/img-logo.png') no-repeat top left;
   margin: 0 auto; }
 
 /* line 38, partials/_global.scss */
@@ -3862,7 +3862,7 @@ a {
   z-index: 2;
   border-top: 4px solid #FFF;
   border-bottom: 4px solid #FFF;
-  background: url('/images/backgrounds/bg-bar.png') repeat top left;
+  background: url('../images/backgrounds/bg-bar.png') repeat top left;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px; }
@@ -3902,7 +3902,7 @@ a {
   box-shadow: white 1px 0 0; }
   /* line 142, partials/_global.scss */
   .event-description h2 {
-    background: url('/images/parts/icons/ico-event.png') no-repeat top left;
+    background: url('../images/parts/icons/ico-event.png') no-repeat top left;
     padding-left: 2em; }
 
 /* line 150, partials/_global.scss */
@@ -3913,7 +3913,7 @@ a {
 /* line 154, partials/_global.scss */
 .event-time {
   padding-right: 2.564%;
-  background: url('/images/parts/icons/ico-time.png') no-repeat top left;
+  background: url('../images/parts/icons/ico-time.png') no-repeat top left;
   display: inline;
   float: left;
   width: 23.077%;
@@ -3926,7 +3926,7 @@ a {
 
 /* line 166, partials/_global.scss */
 .event-location {
-  background: url('/images/parts/icons/ico-location.png') no-repeat top left;
+  background: url('../images/parts/icons/ico-location.png') no-repeat top left;
   display: inline;
   float: left;
   width: 23.077%;
@@ -3943,7 +3943,7 @@ a {
   margin-left: 1.639%;
   margin-right: 1.639%;
   *zoom: 1;
-  background: url('/images/backgrounds/bg-computer.png') no-repeat top left;
+  background: url('../images/backgrounds/bg-computer.png') no-repeat top left;
   margin-top: -2.438em;
   padding-bottom: 2.438em; }
   /* line 18, partials/_custom_mixins.scss */
@@ -4055,7 +4055,7 @@ a {
   display: block;
   width: 143px;
   height: 96px;
-  background: url('/images/parts/img-ample.png') no-repeat top left; }
+  background: url('../images/parts/img-ample.png') no-repeat top left; }
 
 /* line 268, partials/_global.scss */
 .street-address {
@@ -4065,14 +4065,14 @@ a {
 /* line 275, partials/_global.scss */
 .l-footer {
   border-top: 2px solid #333;
-  background: url('/images/backgrounds/bg-footer-texture.png') repeat top left;
+  background: url('../images/backgrounds/bg-footer-texture.png') repeat top left;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 -2px 6px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 -2px 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -2px 6px; }
   /* line 282, partials/_global.scss */
   .l-footer .container {
     padding: 2em 0;
-    background: url('/images/backgrounds/bg-state.png') no-repeat top right; }
+    background: url('../images/backgrounds/bg-state.png') no-repeat top right; }
   /* line 287, partials/_global.scss */
   .l-footer .org {
     clear: both;
