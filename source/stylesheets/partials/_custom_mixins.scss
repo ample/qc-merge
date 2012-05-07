@@ -58,6 +58,30 @@
   }
 } //col-border-right
 
+// ------------------------------------------- //
+//    MEDIA QUERIES   												 //
+// ------------------------------------------- //
+
+$breakSmall: 320px;
+$breakMedium: 560px;
+$breakLarge: 940px;
+
+@mixin respond-to($media) {
+  @if $media == tiny-screens {
+    @media only screen and (max-width: $breakSmall) { @content; }
+  }
+  @else if $media == small-screens {
+    @media only screen and (min-width: $breakSmall + 1) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $breakMedium + 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $breakLarge) { @content; }
+  }
+}
+
+
 
 // ------------------------------------------- //
 //    GRID BACKGROUND     										 //

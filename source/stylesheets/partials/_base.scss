@@ -85,29 +85,28 @@ $infoBorder:                      darken(adjust-hue($infoBackground, -10), 7%);
 // GRID
 // --------------------------------------------------
  
-// Default 940px grid
-$gridColumns:             8;
-$gridColumnWidth:         90px;
-$gridGutterWidth:         40px;
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1)) !default;
 
-// Fluid grid
-$fluidGridColumnWidth:    6.382978723%;
-$fluidGridGutterWidth:    2.127659574%;
+$total-cols: 8;
+$col-width: 90px;
+$gutter-width: 40px;
+$side-gutter-width: $gutter-width;
+
 
 
 // Imports & Includes
 // **************************************************
 // **************************************************
 
+//Reset Styles
+@import "compass/reset";
+
+// Compass files to load
+@import "susy";
+@import "compass/css3";
+@import "compass/typography/links";
+
 // My Mixins
 @import "partials/custom_mixins";
-
-// Twitter Bootstrap
-@import "bootstrap";
-
-@import "compass";
-@import "susy";
 
 @import "partials/global";
 @import "partials/font_awesome"

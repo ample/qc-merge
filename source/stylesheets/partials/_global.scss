@@ -1,5 +1,6 @@
 .container {
   //@include susy-grid-background;
+  @include container;
 }
 
 // Global Layout Styles
@@ -8,12 +9,44 @@
 body {
   width: 100%;
   @include background(#F7F7F7 image-url('backgrounds/bg-page.png') repeat top left);
-  
   font-family: $baseFontFamily;
   color: $textColor;
   font-size: 100%;
   line-height: $baseLineHeight;
+} //body
+
+img {
+  max-width: 100%;
+  width: 100%;
+} //img
+
+// Form Styles
+// --------------------------------------------------
+
+
+input {
+  display: block;
+  box-sizing: border-box;
+      
+  &[type="email"] {
+    font-size: calc-em(20px, $baseFontSize);
+    border: 1px solid rgba(0,0,0,.1);
+    font-weight: normal;
+    height: calc-em(48px, 20px);
+    @include border-radius(2px);
+    
+  }
+  &::-webkit-input-placeholder {
+     font-family: $headlineFontFamily;
+     font-weight: normal;
+  }
+  &:-moz-placeholder {
+    font-family: $headlineFontFamily;
+    font-weight: normal;
+  }
+  
 }
+
 
 
 // Typography Styles
@@ -21,7 +54,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headlineFontFamily;
+  font-weight: bold;
   @include text-shadow(rgba(255,255,255,1) 0 1px 0);
+  margin: 0;
 }
 
 h1 {
@@ -29,17 +64,50 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   display: block;
-  width: 825px;
-  height: 125px;
-  background: image-url('parts/img-logo.png') no-repeat top left;
+  
+  background: image-url('parts/img-logo.png') no-repeat center;
+  background-size: contain;
   margin: 0 auto;
+  
+  
+  width: 100%;
+  min-height: 65px;
+  /* Media Queries */
+  @include respond-to(medium-screens) {
+    min-height: 90px;    
+  }
+  @include respond-to(wide-screens) {
+    min-height: 125px;    
+  }
+  
+}
+
+h2 {
+  font-size: calc-em(28px, $baseFontSize);
+  line-height: calc-em(32px, 28px);
+  margin-bottom: calc-em(14px, 28px);
+}
+
+h3 {
+  font-size: calc-em(20px, $baseFontSize);
+  line-height: calc-em(26px, 20px);
+  margin-bottom: calc-em(10px, 20px);
+  
 }
 
 p {
   font-family: $baseFontFamily;
+  margin-bottom: calc-em(16px, $baseFontSize);
+  &.intro {
+    font-size: calc-em(18px, $baseFontSize);
+    line-height: calc-em(27px, 18px);
+    margin-bottom: 0;
+  }
 }
 
 em {
+  font-style: italic;
+  color: rgba(0,0,0,.5);
   font-size: calc-em(13px, $baseFontSize);
 }
 
@@ -48,11 +116,15 @@ em {
 
 a {
   @include link-colors($linkColor, $linkHoverColor, $linkActiveColor, $linkVisitedColor, $linkFocusColor);
+  text-decoration: none; 
 }
 
 .button {
   display: inline-block;
-  padding: calc-em(3px, $baseFontSize) calc-em(24px, $baseFontSize);
+  display: block;
+  text-align: center;
+  font-size: calc-em(20px, $baseFontSize);
+  padding: calc-em(8px, 20px) calc-em(24px, 20px);
   
   color: #FFF;
   font-family: $headlineFontFamily;
@@ -106,6 +178,7 @@ a {
 
 .l-header {
   padding: calc-em(25px, $baseFontSize) 0;
+  @include full;
 }
 
 /*** Event Section ***/
@@ -123,50 +196,99 @@ a {
   @include full;
   @include group;
   padding: calc-em(25px, $baseFontSize) 0;
+  /* Media Queries */
   
-  > div {
-    min-height: 110px;
-  }
-
-}
-
-.event-description {
-  @include columns(4, 8);
-  width: 46.154%;
-  padding-top: 0;
-  padding-right: 2.564%;
-  padding-bottom: 0;
-  
-  border-right: 1px solid $borderColor;
-  @include box-shadow(rgba(255,255,255,1) 1px 0 0);
-  h2 {
-    @include background(image-url('parts/icons/ico-event.png') no-repeat top left);
-    padding-left: calc-em(32px, $baseFontSize);
+  @include respond-to(medium-screens) {
     
   }
+  @include respond-to(wide-screens) {
+    > div {
+      min-height: 110px;
+    }
+  }    
+} //event-listing
+
+.event-description {
+  h2 {
+    @include background(image-url('parts/icons/ico-event.png') no-repeat left center);
+    padding-left: calc-em(32px, $baseFontSize);
+    padding-top: calc-em(12px, 32px);
+    padding-bottom: calc-em(12px, 32px);
+    
+  }
+
+  .button {
+    margin: calc-em(20px, 20px) 0;
+    @include respond-to(wide-screens) {
+      display: inline-block;
+    }
+  }
+  
+  @include respond-to(medium-screens) {
+    @include columns(4, 8);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  @include respond-to(wide-screens) {
+    @include columns(5, 8);
+  }
+  
 } //event-description
+
+.event-details {
+  @include respond-to(medium-screens) {
+    @include columns(4, 8);
+    @include omega(4);
+  }
+  @include respond-to(wide-screens) {
+    @include columns(3,8);
+    @include omega(3);
+  }
+} //event-details
 
 .event-time,
 .event-location {
-  padding-top: calc-em(50px, $baseFontSize); 
+  padding-top: calc-em(60px, $baseFontSize);
+  margin-top: calc-em(16px, $baseFontSize);
+  
+  
+  @include columns(4, 8);
+  
+  @include respond-to(medium-screens) {
+    padding-top: 0;
+    @include columns(4, 4);
+    @include omega(8);
+    
+    h3 {
+      padding-left: calc-em(60px, 20px);
+    } //h3
+    
+    time,
+    .location {
+      padding-left: calc-em(60px, $baseFontSize);
+    } //time & location
+    
+  } //respond-to
+  
 } //time & location
 
 .event-time {
 
-  padding-right: 2.564%;
-  
   @include background(image-url('parts/icons/ico-time.png') no-repeat top left);
-  @include columns(2, 8);
-  width: 20.513%;
-  border-right: 1px solid $borderColor;
-  @include box-shadow(rgba(255,255,255,1) 1px 0 0);
+  
+  @include respond-to(wide-screens) {
+    margin-top: 0;
+  }
+  
   
 } //event-time
 
 .event-location { 
   @include background(image-url('parts/icons/ico-location.png') no-repeat top left);
-  @include columns(2, 8);
+
   @include omega(8);
+  
 } //event-location
 
 /*** Main Content ***/
@@ -174,16 +296,33 @@ a {
 .what-is-refresh {
   @include full;
   @include group;
-  @include background(image-url('backgrounds/bg-computer.png') no-repeat top left);
-  
-  margin-top: -(calc-em(39px, $baseFontSize));
-  padding-bottom: calc-em(39px, $baseFontSize);
   
   .content {
-    @include columns(5, 8);
-    @include omega(8);  
-    padding-top: calc-em(72px, $baseFontSize);
+    padding-top: calc-em(36px, $baseFontSize);
+    
+    @include respond-to(medium-screens) {
+      padding-bottom: calc-em(39px, $baseFontSize);
+      @include columns(5, 8);
+      @include omega(8);
+    } //media-queries
+    
+    @include respond-to(wide-screens) {
+      padding-top: calc-em(72px, $baseFontSize);
+    }
+    
+    
+  } //content
+  @include respond-to(medium-screens) {
+    @include background(image-url('backgrounds/bg-computer.png') no-repeat 0 10%);
+    background-size: 40%;
   }
+  
+  @include respond-to(wide-screens) {
+    margin-top: -(calc-em(48px, $baseFontSize));
+    background-size: auto;
+  }
+  
+  
 } //what-is
 
 .more-refresh {
@@ -192,19 +331,66 @@ a {
   margin-top: calc-em(48px, $baseFontSize);
   margin-bottom: calc-em(48px, $baseFontSize);
   .about-us {
-    @include columns(3, 8);
+    header {
+      @include respond-to(medium-screens) {
+        @include columns(4,8);
+      } //medium screens
+      @include respond-to(wide-screens) {
+        @include columns(4,4);
+      }
+    } //header
+    
+    .sign-up-form {
+      @include respond-to(medium-screens) {
+        @include columns(4,8);
+        @include omega(8);
+      } //medium-screens
+      @include respond-to(wide-screens) {
+        @include columns(4,4);
+      } //wide-screens
+    } //sign-up-form
     
     em {
       margin-top: calc-em(18px, 13px);
       display: block;
       line-height: calc-em(18px, 13px);
+      @include respond-to(wide-screens) {
+        clear: both; 
+        display: block;
+        padding-top: calc-em(18px, 13px);
+      } //wide-screens
+    } //em
+    
+    input {
+      @include columns(8,8);
+      margin-bottom: calc-em(10px, 20px);
+      @include respond-to(medium-screens) {
+        @include columns(4,4);
+      }
+      @include respond-to(wide-screens) {
+        display: inline-block;
+        width: 45%;
+        margin: 0;
+      } //wide-screens
+    } //input
+    
+    .button {
+      @include respond-to(wide-screens) {
+        margin: 0 0 0 4%;
+      } //button
     }
+    
+      
+    @include respond-to(wide-screens) {
+      @include columns(4, 8);
+    } //wide-screens 
+    
   } //about-us
   
   .photos {
-    @include columns(5, 8);
+    @include columns(8,8);
     @include omega(8);
-
+    margin-top: calc-em(16px, $baseFontSize);
     position: relative;
     
     img {
@@ -213,34 +399,37 @@ a {
       @include rotate(1deg);
       z-index: 2;
       position: relative;
-      
     }
     
     &:before,
     &:after {
+      max-width: 100%;
       border: 5px solid #FFF;
       content: '';
       position: absolute;
       top: 0;
-      width: 100%;
+      width: 98%;
       height: 95%;
       background: #000;
       display: block;
       @include box-shadow(rgba(0,0,0,.2) 0 0 3px);
     
-    
-    };
+    }
     
     &:before {
-      
       @include rotate(-1deg);
-      
     }
     
     &:after {
       @include rotate(3deg);
       z-index: 1;
     }
+    
+    @include respond-to(wide-screens) {
+      @include columns(4,8);
+      @include omega(8);
+    }
+    
     
   } //photos
 } //more-refresh
@@ -261,12 +450,11 @@ a {
   width: 143px;
   height: 96px;
   background: image-url('parts/img-ample.png') no-repeat top left;
-  
+  margin: 0 auto;
   
 } //fn
 
 .street-address {
-  display: block;
 }
 
 
@@ -278,17 +466,26 @@ a {
   @include background(image-url('backgrounds/bg-footer-texture.png') repeat top left);
   @include box-shadow(rgba(0,0,0,.1) 0 -2px 6px);
   
-  
   .container {
-    padding: calc-em(32px, $baseFontSize) 0;
+    padding: calc-em(16px, $baseFontSize) 0;
     @include background(image-url('backgrounds/bg-state.png') no-repeat top right);
-  }
+    background-size: contain;
+    @include respond-to(wide-screens) {
+      
+      background-size: auto;
+      padding: calc-em(32px, $baseFontSize) 0 calc-em(72px, $baseFontSize);
+    } //wide-screen
+  } //container
   
   .org {
     @include full;
     @include group;
     .vcard {
-      @include columns(3,8);
+      margin: 0 auto;
+      @include respond-to(medium-screens) {
+        
+        @include columns(3,8);
+      }
     }
   }
   
@@ -296,6 +493,7 @@ a {
     @include full;
     font-family: $headlineFontFamily;
     font-size: calc-em(11px, $baseFontSize);
+    margin-top: calc-em(17px, 11px);
   } //copyright
   
 } //footer
