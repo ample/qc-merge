@@ -74,7 +74,7 @@ h1 {
   min-height: 65px;
   
   /* Media Queries */
-  @include retina-image {
+  @include retina-image(825px, 125px) {
     background: image-url('parts/img-logo@2x.png') no-repeat center;
   } //retina-image
   
@@ -222,7 +222,7 @@ a {
     padding-bottom: calc-em(12px, 32px);
     
     /* Media Queries */
-    @include retina-image {
+    @include retina-image(35px, 48px) {
       @include background(image-url('parts/icons/ico-event.png') no-repeat left center);
     } //retina-image
     
@@ -300,7 +300,7 @@ a {
   @include background(image-url('parts/icons/ico-time.png') no-repeat top left);
   
   /* Media Queries */
-  @include retina-image {
+  @include retina-image(41px, 48px) {
     @include background(image-url('parts/icons/ico-time@2x.png') no-repeat top left);
   } //retina-image
   
@@ -316,8 +316,8 @@ a {
   @include background(image-url('parts/icons/ico-location.png') no-repeat top left);
 
   /* Media Queries */
-  @include retina-image {
-    @include background(image-url('parts/icons/ico-location.png') no-repeat top left);
+  @include retina-image(44px, 48px) {
+    @include background(image-url('parts/icons/ico-location@2x.png') no-repeat top left);
   } //retina-image
   
 } //event-location
@@ -504,7 +504,7 @@ a {
   margin: 0 auto;
   
   /* Media Queries */
-  @include retina-image {
+  @include retina-image(143px, 96px) {
     background: image-url('parts/img-ample@2x.png') no-repeat top left;
   } //retina-image
   
@@ -528,7 +528,7 @@ a {
     background-size: contain;
 
     /* Media Queries */
-    @include retina-image {
+    @include retina-image(553px, 216px) {
       @include background(image-url('backgrounds/bg-state@2x.png') no-repeat top right);
     } //retina-image
     
