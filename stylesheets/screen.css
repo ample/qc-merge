@@ -127,7 +127,8 @@ h1 {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     /* line 62, partials/_global.scss */
     h1 {
-      background: url('../images/parts/img-logo@2x.png') no-repeat center; } }
+      background: url('../images/parts/img-logo@2x.png') no-repeat center;
+      -webkit-background-size: 75px 75px; } }
   @media only screen and (min-width: 561px) {
     /* line 62, partials/_global.scss */
     h1 {
@@ -283,7 +284,8 @@ a {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     /* line 218, partials/_global.scss */
     .event-description h2 {
-      background: url('../images/parts/icons/ico-event.png') no-repeat left center; } }
+      background: url('../images/parts/icons/ico-event.png') no-repeat left center;
+      -webkit-background-size: 75px 75px; } }
 /* line 231, partials/_global.scss */
 .event-description .button {
   margin: 1em 0;
@@ -388,7 +390,8 @@ a {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     /* line 299, partials/_global.scss */
     .event-time {
-      background: url('../images/parts/icons/ico-time@2x.png') no-repeat top left; } }
+      background: url('../images/parts/icons/ico-time@2x.png') no-repeat top left;
+      -webkit-background-size: 75px 75px; } }
   @media only screen and (min-width: 940px) {
     /* line 299, partials/_global.scss */
     .event-time {
@@ -405,7 +408,8 @@ a {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     /* line 313, partials/_global.scss */
     .event-location {
-      background: url('../images/parts/icons/ico-location.png') no-repeat top left; } }
+      background: url('../images/parts/icons/ico-location@2x.png') no-repeat top left;
+      -webkit-background-size: 75px 75px; } }
 
 /*** Main Content ***/
 /* line 327, partials/_global.scss */
@@ -637,7 +641,8 @@ a {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     /* line 495, partials/_global.scss */
     .fn {
-      background: url('../images/parts/img-ample@2x.png') no-repeat top left; } }
+      background: url('../images/parts/img-ample@2x.png') no-repeat top left;
+      -webkit-background-size: 75px 75px; } }
 
 /*** Footer ***/
 /* line 519, partials/_global.scss */
@@ -656,7 +661,8 @@ a {
     @media only screen and (-webkit-min-device-pixel-ratio: 2) {
       /* line 525, partials/_global.scss */
       .l-footer .container {
-        background: url('../images/backgrounds/bg-state@2x.png') no-repeat top right; } }
+        background: url('../images/backgrounds/bg-state@2x.png') no-repeat top right;
+        -webkit-background-size: 75px 75px; } }
     @media only screen and (min-width: 940px) {
       /* line 525, partials/_global.scss */
       .l-footer .container {
