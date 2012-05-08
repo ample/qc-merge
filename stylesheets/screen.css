@@ -87,10 +87,10 @@ input {
   box-sizing: border-box; }
   /* line 31, partials/_global.scss */
   input[type="email"] {
-    font-size: 1.25em;
+    font-size: 1.125em;
     border: 1px solid rgba(0, 0, 0, 0.1);
     font-weight: normal;
-    height: 2.4em;
+    height: 2.667em;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
@@ -124,6 +124,10 @@ h1 {
   width: 100%;
   min-height: 65px;
   /* Media Queries */ }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    /* line 62, partials/_global.scss */
+    h1 {
+      background: url('../images/parts/img-logo@2x.png') no-repeat center; } }
   @media only screen and (min-width: 561px) {
     /* line 62, partials/_global.scss */
     h1 {
@@ -133,35 +137,35 @@ h1 {
     h1 {
       min-height: 125px; } }
 
-/* line 85, partials/_global.scss */
+/* line 90, partials/_global.scss */
 h2 {
   font-size: 1.75em;
   line-height: 1.143em;
   margin-bottom: 0.5em; }
 
-/* line 91, partials/_global.scss */
+/* line 96, partials/_global.scss */
 h3 {
   font-size: 1.25em;
   line-height: 1.3em;
   margin-bottom: 0.5em; }
 
-/* line 98, partials/_global.scss */
+/* line 103, partials/_global.scss */
 p {
   font-family: "ff-meta-serif-web-pro", Georgia, Times, "Times New Roman", serif;
   margin-bottom: 1em; }
-  /* line 101, partials/_global.scss */
+  /* line 106, partials/_global.scss */
   p.intro {
     font-size: 1.125em;
     line-height: 1.5em;
     margin-bottom: 0; }
 
-/* line 108, partials/_global.scss */
+/* line 113, partials/_global.scss */
 em {
   font-style: italic;
   color: rgba(0, 0, 0, 0.5);
   font-size: 0.813em; }
 
-/* line 117, partials/_global.scss */
+/* line 122, partials/_global.scss */
 a {
   color: #f10010;
   text-decoration: none; }
@@ -178,7 +182,7 @@ a {
   a:active {
     color: #d7000e; }
 
-/* line 122, partials/_global.scss */
+/* line 127, partials/_global.scss */
 .button {
   display: inline-block;
   display: block;
@@ -210,14 +214,14 @@ a {
   -webkit-box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 0 6px, rgba(0, 0, 0, 0.4) 0 1px 3px;
   -moz-box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 0 6px, rgba(0, 0, 0, 0.4) 0 1px 3px;
   box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 0 6px, rgba(0, 0, 0, 0.4) 0 1px 3px; }
-  /* line 157, partials/_global.scss */
+  /* line 162, partials/_global.scss */
   .button:visited {
     color: #FFF; }
-  /* line 161, partials/_global.scss */
+  /* line 166, partials/_global.scss */
   .button:hover {
     color: #FFF;
     text-decoration: none; }
-  /* line 167, partials/_global.scss */
+  /* line 172, partials/_global.scss */
   .button:active, .button:focus {
     color: white;
     -webkit-box-shadow: inset rgba(255, 255, 255, 0.1) 0 1px 0, inset rgba(0, 0, 0, 0.6) 0 0 13px;
@@ -225,7 +229,7 @@ a {
     box-shadow: inset rgba(255, 255, 255, 0.1) 0 1px 0, inset rgba(0, 0, 0, 0.6) 0 0 13px; }
 
 /*** Header ***/
-/* line 179, partials/_global.scss */
+/* line 184, partials/_global.scss */
 .l-header {
   padding: 1.563em 0;
   clear: both;
@@ -233,7 +237,7 @@ a {
   margin-right: 3.704%; }
 
 /*** Event Section ***/
-/* line 186, partials/_global.scss */
+/* line 191, partials/_global.scss */
 .event {
   position: relative;
   z-index: 2;
@@ -244,7 +248,7 @@ a {
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px; }
 
-/* line 195, partials/_global.scss */
+/* line 200, partials/_global.scss */
 .event-listing {
   clear: both;
   margin-left: 3.704%;
@@ -260,26 +264,36 @@ a {
     content: ".";
     clear: both;
     height: 0; }
+  @media only screen and (min-width: 561px) {
+    /* line 200, partials/_global.scss */
+    .event-listing {
+      padding-bottom: 0; } }
   @media only screen and (min-width: 940px) {
-    /* line 205, partials/_global.scss */
+    /* line 210, partials/_global.scss */
     .event-listing > div {
       min-height: 110px; } }
 
-/* line 212, partials/_global.scss */
+/* line 218, partials/_global.scss */
 .event-description h2 {
   background: url('../images/parts/icons/ico-event.png') no-repeat left center;
   padding-left: 2em;
   padding-top: 0.375em;
-  padding-bottom: 0.375em; }
-/* line 220, partials/_global.scss */
+  padding-bottom: 0.375em;
+  /* Media Queries */ }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    /* line 218, partials/_global.scss */
+    .event-description h2 {
+      background: url('../images/parts/icons/ico-event.png') no-repeat left center; } }
+/* line 231, partials/_global.scss */
 .event-description .button {
-  margin: 1em 0; }
+  margin: 1em 0;
+  /* Media Queries */ }
   @media only screen and (min-width: 940px) {
-    /* line 220, partials/_global.scss */
+    /* line 231, partials/_global.scss */
     .event-description .button {
       display: inline-block; } }
 @media only screen and (min-width: 561px) {
-  /* line 211, partials/_global.scss */
+  /* line 217, partials/_global.scss */
   .event-description {
     display: inline;
     float: left;
@@ -288,37 +302,40 @@ a {
     padding-top: 0;
     padding-bottom: 0; } }
 @media only screen and (min-width: 940px) {
-  /* line 211, partials/_global.scss */
+  /* line 217, partials/_global.scss */
   .event-description {
     display: inline;
     float: left;
     width: 61%;
     margin-right: 4%; } }
 
-@media only screen and (min-width: 561px) {
-  /* line 239, partials/_global.scss */
-  .event-details {
-    display: inline;
-    float: left;
-    width: 48%;
-    margin-right: 4%;
-    display: inline;
-    float: right;
-    margin-right: 0;
-    #margin-left: -40px; } }
-@media only screen and (min-width: 940px) {
-  /* line 239, partials/_global.scss */
-  .event-details {
-    display: inline;
-    float: left;
-    width: 35%;
-    margin-right: 4%;
-    display: inline;
-    float: right;
-    margin-right: 0;
-    #margin-left: -40px; } }
+/* line 252, partials/_global.scss */
+.event-details {
+  /* Media Queries */ }
+  @media only screen and (min-width: 561px) {
+    /* line 252, partials/_global.scss */
+    .event-details {
+      display: inline;
+      float: left;
+      width: 48%;
+      margin-right: 4%;
+      display: inline;
+      float: right;
+      margin-right: 0;
+      #margin-left: -40px; } }
+  @media only screen and (min-width: 940px) {
+    /* line 252, partials/_global.scss */
+    .event-details {
+      display: inline;
+      float: left;
+      width: 35%;
+      margin-right: 4%;
+      display: inline;
+      float: right;
+      margin-right: 0;
+      #margin-left: -40px; } }
 
-/* line 251, partials/_global.scss */
+/* line 265, partials/_global.scss */
 .event-time,
 .event-location {
   padding-top: 3.75em;
@@ -326,9 +343,10 @@ a {
   display: inline;
   float: left;
   width: 48%;
-  margin-right: 4%; }
+  margin-right: 4%;
+  /* Media Queries */ }
   @media only screen and (min-width: 561px) {
-    /* line 251, partials/_global.scss */
+    /* line 265, partials/_global.scss */
     .event-time,
     .event-location {
       padding-top: 0;
@@ -339,41 +357,64 @@ a {
       display: inline;
       float: right;
       margin-right: 0;
-      #margin-left: -40px; }
-      /* line 263, partials/_global.scss */
+      #margin-left: -40px; } }
+  /* line 279, partials/_global.scss */
+  .event-time h3,
+  .event-location h3 {
+    /* Media Queries */ }
+    @media only screen and (min-width: 561px) {
+      /* line 279, partials/_global.scss */
       .event-time h3,
       .event-location h3 {
-        padding-left: 3em; }
-      /* line 268, partials/_global.scss */
+        padding-left: 3em; } }
+  /* line 288, partials/_global.scss */
+  .event-time time,
+  .event-time .location,
+  .event-location time,
+  .event-location .location {
+    /* Media Queries */ }
+    @media only screen and (min-width: 561px) {
+      /* line 288, partials/_global.scss */
       .event-time time,
       .event-time .location,
       .event-location time,
       .event-location .location {
         padding-left: 3.75em; } }
 
-/* line 276, partials/_global.scss */
+/* line 299, partials/_global.scss */
 .event-time {
-  background: url('../images/parts/icons/ico-time.png') no-repeat top left; }
+  background: url('../images/parts/icons/ico-time.png') no-repeat top left;
+  /* Media Queries */ }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    /* line 299, partials/_global.scss */
+    .event-time {
+      background: url('../images/parts/icons/ico-time@2x.png') no-repeat top left; } }
   @media only screen and (min-width: 940px) {
-    /* line 276, partials/_global.scss */
+    /* line 299, partials/_global.scss */
     .event-time {
       margin-top: 0; } }
 
-/* line 287, partials/_global.scss */
+/* line 313, partials/_global.scss */
 .event-location {
-  background: url('../images/parts/icons/ico-location.png') no-repeat top left;
   display: inline;
   float: right;
   margin-right: 0;
-  #margin-left: -40px; }
+  #margin-left: -40px;
+  background: url('../images/parts/icons/ico-location.png') no-repeat top left;
+  /* Media Queries */ }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    /* line 313, partials/_global.scss */
+    .event-location {
+      background: url('../images/parts/icons/ico-location.png') no-repeat top left; } }
 
 /*** Main Content ***/
-/* line 296, partials/_global.scss */
+/* line 327, partials/_global.scss */
 .what-is-refresh {
   clear: both;
   margin-left: 3.704%;
   margin-right: 3.704%;
-  *zoom: 1; }
+  *zoom: 1;
+  /* Media Queries */ }
   /* line 18, partials/_custom_mixins.scss */
   .what-is-refresh:before, .what-is-refresh:after {
     visibility: hidden;
@@ -382,11 +423,12 @@ a {
     content: ".";
     clear: both;
     height: 0; }
-  /* line 300, partials/_global.scss */
+  /* line 331, partials/_global.scss */
   .what-is-refresh .content {
-    padding-top: 2.25em; }
+    padding-top: 2.25em;
+    /* Media Queries */ }
     @media only screen and (min-width: 561px) {
-      /* line 300, partials/_global.scss */
+      /* line 331, partials/_global.scss */
       .what-is-refresh .content {
         padding-bottom: 2.438em;
         display: inline;
@@ -398,21 +440,21 @@ a {
         margin-right: 0;
         #margin-left: -40px; } }
     @media only screen and (min-width: 940px) {
-      /* line 300, partials/_global.scss */
+      /* line 331, partials/_global.scss */
       .what-is-refresh .content {
         padding-top: 4.5em; } }
   @media only screen and (min-width: 561px) {
-    /* line 296, partials/_global.scss */
+    /* line 327, partials/_global.scss */
     .what-is-refresh {
       background: url('../images/backgrounds/bg-computer.png') no-repeat 0 10%;
       background-size: 40%; } }
   @media only screen and (min-width: 940px) {
-    /* line 296, partials/_global.scss */
+    /* line 327, partials/_global.scss */
     .what-is-refresh {
       margin-top: -3em;
       background-size: auto; } }
 
-/* line 328, partials/_global.scss */
+/* line 359, partials/_global.scss */
 .more-refresh {
   clear: both;
   margin-left: 3.704%;
@@ -428,81 +470,92 @@ a {
     content: ".";
     clear: both;
     height: 0; }
-  @media only screen and (min-width: 561px) {
-    /* line 334, partials/_global.scss */
-    .more-refresh .about-us header {
+  @media only screen and (min-width: 940px) {
+    /* line 364, partials/_global.scss */
+    .more-refresh .about-us {
       display: inline;
       float: left;
       width: 48%;
       margin-right: 4%; } }
-  @media only screen and (min-width: 940px) {
-    /* line 334, partials/_global.scss */
-    .more-refresh .about-us header {
-      display: inline;
-      float: left;
-      width: 100%;
-      margin-right: 8.333%; } }
-  @media only screen and (min-width: 561px) {
-    /* line 343, partials/_global.scss */
-    .more-refresh .about-us .sign-up-form {
-      display: inline;
-      float: left;
-      width: 48%;
-      margin-right: 4%;
-      display: inline;
-      float: right;
-      margin-right: 0;
-      #margin-left: -40px; } }
-  @media only screen and (min-width: 940px) {
-    /* line 343, partials/_global.scss */
-    .more-refresh .about-us .sign-up-form {
-      display: inline;
-      float: left;
-      width: 100%;
-      margin-right: 8.333%; } }
-  /* line 353, partials/_global.scss */
+  /* line 370, partials/_global.scss */
+  .more-refresh .about-us header {
+    /* Media Queries */ }
+    @media only screen and (min-width: 561px) {
+      /* line 370, partials/_global.scss */
+      .more-refresh .about-us header {
+        display: inline;
+        float: left;
+        width: 48%;
+        margin-right: 4%; } }
+    @media only screen and (min-width: 940px) {
+      /* line 370, partials/_global.scss */
+      .more-refresh .about-us header {
+        display: inline;
+        float: left;
+        width: 100%;
+        margin-right: 8.333%; } }
+  /* line 383, partials/_global.scss */
+  .more-refresh .about-us .sign-up-form {
+    /* Media Queries */ }
+    @media only screen and (min-width: 561px) {
+      /* line 383, partials/_global.scss */
+      .more-refresh .about-us .sign-up-form {
+        display: inline;
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+        display: inline;
+        float: right;
+        margin-right: 0;
+        #margin-left: -40px; } }
+    @media only screen and (min-width: 940px) {
+      /* line 383, partials/_global.scss */
+      .more-refresh .about-us .sign-up-form {
+        display: inline;
+        float: left;
+        width: 100%;
+        margin-right: 8.333%; } }
+  /* line 397, partials/_global.scss */
   .more-refresh .about-us em {
     margin-top: 1.385em;
     display: block;
-    line-height: 1.385em; }
+    line-height: 1.385em;
+    /* Media Queries */ }
     @media only screen and (min-width: 940px) {
-      /* line 353, partials/_global.scss */
+      /* line 397, partials/_global.scss */
       .more-refresh .about-us em {
         clear: both;
         display: block;
         padding-top: 1.385em; } }
-  /* line 364, partials/_global.scss */
+  /* line 410, partials/_global.scss */
   .more-refresh .about-us input {
     display: inline;
     float: left;
     width: 100%;
     margin-right: 4%;
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.5em;
+    /* Media Queries */ }
     @media only screen and (min-width: 561px) {
-      /* line 364, partials/_global.scss */
+      /* line 410, partials/_global.scss */
       .more-refresh .about-us input {
         display: inline;
         float: left;
         width: 100%;
         margin-right: 8.333%; } }
     @media only screen and (min-width: 940px) {
-      /* line 364, partials/_global.scss */
+      /* line 410, partials/_global.scss */
       .more-refresh .about-us input {
         display: inline-block;
         width: 45%;
         margin: 0; } }
-  @media only screen and (min-width: 940px) {
-    /* line 377, partials/_global.scss */
-    .more-refresh .about-us .button {
-      margin: 0 0 0 4%; } }
-  @media only screen and (min-width: 940px) {
-    /* line 333, partials/_global.scss */
-    .more-refresh .about-us {
-      display: inline;
-      float: left;
-      width: 48%;
-      margin-right: 4%; } }
-  /* line 390, partials/_global.scss */
+  /* line 426, partials/_global.scss */
+  .more-refresh .about-us .button {
+    /* Media Queries */ }
+    @media only screen and (min-width: 940px) {
+      /* line 426, partials/_global.scss */
+      .more-refresh .about-us .button {
+        margin: 0 0 0 4%; } }
+  /* line 440, partials/_global.scss */
   .more-refresh .photos {
     display: inline;
     float: left;
@@ -513,8 +566,9 @@ a {
     margin-right: 0;
     #margin-left: -40px;
     margin-top: 1em;
-    position: relative; }
-    /* line 396, partials/_global.scss */
+    position: relative;
+    /* Media Queries */ }
+    /* line 446, partials/_global.scss */
     .more-refresh .photos img {
       border: 5px solid #FFF;
       -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
@@ -527,7 +581,7 @@ a {
       transform: rotate(1deg);
       z-index: 2;
       position: relative; }
-    /* line 405, partials/_global.scss */
+    /* line 455, partials/_global.scss */
     .more-refresh .photos:before, .more-refresh .photos:after {
       max-width: 100%;
       border: 5px solid #FFF;
@@ -541,14 +595,14 @@ a {
       -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
       -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px;
       box-shadow: rgba(0, 0, 0, 0.2) 0 0 3px; }
-    /* line 419, partials/_global.scss */
+    /* line 469, partials/_global.scss */
     .more-refresh .photos:before {
       -webkit-transform: rotate(-1deg);
       -moz-transform: rotate(-1deg);
       -ms-transform: rotate(-1deg);
       -o-transform: rotate(-1deg);
       transform: rotate(-1deg); }
-    /* line 423, partials/_global.scss */
+    /* line 473, partials/_global.scss */
     .more-refresh .photos:after {
       -webkit-transform: rotate(3deg);
       -moz-transform: rotate(3deg);
@@ -557,7 +611,7 @@ a {
       transform: rotate(3deg);
       z-index: 1; }
     @media only screen and (min-width: 940px) {
-      /* line 390, partials/_global.scss */
+      /* line 440, partials/_global.scss */
       .more-refresh .photos {
         display: inline;
         float: left;
@@ -569,7 +623,7 @@ a {
         #margin-left: -40px; } }
 
 /*** Vcard ***/
-/* line 444, partials/_global.scss */
+/* line 495, partials/_global.scss */
 .fn {
   text-indent: 100%;
   white-space: nowrap;
@@ -578,27 +632,37 @@ a {
   width: 143px;
   height: 96px;
   background: url('../images/parts/img-ample.png') no-repeat top left;
-  margin: 0 auto; }
+  margin: 0 auto;
+  /* Media Queries */ }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    /* line 495, partials/_global.scss */
+    .fn {
+      background: url('../images/parts/img-ample@2x.png') no-repeat top left; } }
 
 /*** Footer ***/
-/* line 463, partials/_global.scss */
+/* line 519, partials/_global.scss */
 .l-footer {
   border-top: 2px solid #333;
   background: url('../images/backgrounds/bg-footer-texture.png') repeat top left;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 -2px 6px;
   -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 -2px 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 -2px 6px; }
-  /* line 469, partials/_global.scss */
+  /* line 525, partials/_global.scss */
   .l-footer .container {
     padding: 1em 0;
     background: url('../images/backgrounds/bg-state.png') no-repeat top right;
-    background-size: contain; }
+    background-size: contain;
+    /* Media Queries */ }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+      /* line 525, partials/_global.scss */
+      .l-footer .container {
+        background: url('../images/backgrounds/bg-state@2x.png') no-repeat top right; } }
     @media only screen and (min-width: 940px) {
-      /* line 469, partials/_global.scss */
+      /* line 525, partials/_global.scss */
       .l-footer .container {
         background-size: auto;
         padding: 2em 0 4.5em; } }
-  /* line 480, partials/_global.scss */
+  /* line 542, partials/_global.scss */
   .l-footer .org {
     clear: both;
     margin-left: 3.704%;
@@ -612,17 +676,18 @@ a {
       content: ".";
       clear: both;
       height: 0; }
-    /* line 483, partials/_global.scss */
+    /* line 545, partials/_global.scss */
     .l-footer .org .vcard {
-      margin: 0 auto; }
+      margin: 0 auto;
+      /* Media Queries */ }
       @media only screen and (min-width: 561px) {
-        /* line 483, partials/_global.scss */
+        /* line 545, partials/_global.scss */
         .l-footer .org .vcard {
           display: inline;
           float: left;
           width: 35%;
           margin-right: 4%; } }
-  /* line 492, partials/_global.scss */
+  /* line 556, partials/_global.scss */
   .l-footer .copyright {
     clear: both;
     margin-left: 3.704%;
