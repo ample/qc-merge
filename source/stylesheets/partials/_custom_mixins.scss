@@ -84,7 +84,7 @@ $breakLarge: 940px;
 @mixin retina-image($width, $height) {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
     @content;
-    -webkit-background-size: 75px 75px;
+    -webkit-background-size: $width $height;
   }
 }
 
