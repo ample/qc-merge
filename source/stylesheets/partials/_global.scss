@@ -74,7 +74,7 @@ h1 {
   min-height: 65px;
   
   /* Media Queries */
-  @include retina-image(825px, 125px) {
+  @include retina-image(100%, auto) {
     background: image-url('parts/img-logo@2x.png') no-repeat center;
   } //retina-image
   
@@ -528,7 +528,7 @@ a {
     background-size: contain;
 
     /* Media Queries */
-    @include retina-image(553px, 216px) {
+    @include retina-image(100%, auto) {
       @include background(image-url('backgrounds/bg-state@2x.png') no-repeat top right);
     } //retina-image
     
