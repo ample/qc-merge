@@ -128,7 +128,7 @@ h1 {
     /* line 62, partials/_global.scss */
     h1 {
       background: url('../images/parts/img-logo@2x.png') no-repeat center;
-      -webkit-background-size: 825px 125px; } }
+      -webkit-background-size: 100% auto; } }
   @media only screen and (min-width: 561px) {
     /* line 62, partials/_global.scss */
     h1 {
@@ -662,7 +662,7 @@ a {
       /* line 525, partials/_global.scss */
       .l-footer .container {
         background: url('../images/backgrounds/bg-state@2x.png') no-repeat top right;
-        -webkit-background-size: 553px 216px; } }
+        -webkit-background-size: 100% auto; } }
     @media only screen and (min-width: 940px) {
       /* line 525, partials/_global.scss */
       .l-footer .container {
