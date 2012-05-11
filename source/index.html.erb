@@ -4,7 +4,7 @@
       <div class="event-description">
         <h2>Becoming Responsibly Responsive</h2>
         <p class="intro">In this workshop, we'll give a brief background of what Responsive Web Design is and delve further into how Responsive Web Design is changing the process of designing and developing for today's web.</p>
-        <a href="#" class="button" title="Register">Register Now</a>
+        
       </div>
       <!-- /event-description -->
       
@@ -51,8 +51,10 @@
       <div class="about-us">
         <header>
           <h2>Want more RefreshCincy?</h2>
-          <p>Sign-up for our newsletter to participate in discussions, share tips and stay active in the community.</p>
+          <p>Follow us on <%= link_to 'Twitter', 'http://twitter.com/qcmerge', :target => '_blank' %> to participate in discussions, share tips and stay active in the community.</p>
+          <%= link_to 'Twitter', 'http://twitter.com/qcmerge', :target => '_blank', :class => 'button' %>
         </header>
+        <!--
         <div class="sign-up-form">
           <h3>Sign-up for the newsletter</h3>
           <input type="email" placeholder="YourName@domain.com" />
@@ -60,7 +62,7 @@
           <p><em>We hate spam, too. We promise to keep your email address to ourselves.</em></p>
           
         </div>
-        
+        -->
       </div>
       <!-- about-us -->
       <div class="photos">
