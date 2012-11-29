@@ -1,5 +1,4 @@
 require 'compass'
-require 'susy'
 require 'bootstrap-sass'
 
 # Methods defined in the helpers block are available in templates
@@ -11,19 +10,10 @@ helpers do
     if start_year == end_year
       start_year.to_s
     else
-      start_year.to_s + '-' + end_year.to_ss
+      start_year.to_s + '-' + end_year.to_s
     end
   end
   
 end
 
-# Build-specific configuration
-configure :build do
- 
-  
-  # Use relative URLs
-  activate :relative_assets
-  
-  
-  
-end
+page "*", :layout => "public"

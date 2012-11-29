@@ -1,8 +1,8 @@
 source :rubygems
 
-gem "middleman", "~> 3.0.0.beta.2"
-gem "sass", "~> 3.2.0.alpha.101"
-
-gem "compass-susy-plugin"
+gem "coffee_cup"
+gem "sass", "~> 3.2.1"
+gem "middleman", "~> 3.0.6"
 gem 'middleman-smusher'
-gem 'bootstrap-sass'
+gem "bootstrap-sass", "~> 2.1.0.1"
+gem "compass", "~> 0.12.2"

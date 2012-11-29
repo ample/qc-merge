@@ -1,1 +1,1 @@
-rvm 1.9.3@middleman-qcmerge --create
+rvm 1.9.3@qc-merge-new --create

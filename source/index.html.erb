@@ -1,78 +1,485 @@
-<section class="event">
-  <div class="container">
-    <div class="event-listing">
-      <div class="event-description">
-        <h2>Becoming Responsibly Responsive</h2>
-        <p class="intro">In this workshop, we'll give a brief background of what Responsive Web Design is and delve further into how Responsive Web Design is changing the process of designing and developing for today's web.</p>
-        
-      </div>
-      <!-- /event-description -->
       
-      <div class="event-details">
-        <div class="event-time">
-          <h3>June ??, 2012</h3>
-          <time>6:30 p.m.</time>
-    
-        </div>
-        <!-- /event-time -->
-  
-        <div class="event-location">
-          <h3>Ample</h3>
-          <div class="location">
-            200 W. 4th Street <br />
-            Cincinnati, OH 45202
-          </div>
-        </div>
-        <!-- /event-location -->
-        
-      </div>
-      <!-- /event-details -->
-
-      
-    </div>
-    
-    
-  </div>
-  
-</section>
 
 <div class="container">
+
+  <h1>Yo dog, those lists be acting like tables.</h1>
+
+  <div class="table-esque">
     
-  <section class="what-is-refresh">
-    <div class="content">
-      <h2>What is RefreshCincy?</h2>
-      <p>RefreshCincy is a group of like-minded designers, developers, copywriters and other technologists interested in getting together, talking about technology and possibly drinking a few beers.</p>
-      <p>We meet once a month and discuss a trending topic or two of the day while engaging in some healthy debates about where the web is headed. So come on down, grab a seat and geek out with us.</p>
-    </div>
-  </section>
-  
-  <section class="more-refresh">
-    <div class="content">
-      <div class="about-us">
-        <header>
-          <h2>Want more RefreshCincy?</h2>
-          <p>Follow us on <%= link_to 'Twitter', 'http://twitter.com/qcmerge', :target => '_blank' %> to participate in discussions, share tips and stay active in the community.</p>
-          <%= link_to 'Twitter', 'http://twitter.com/qcmerge', :target => '_blank', :class => 'button' %>
-        </header>
-        <!--
-        <div class="sign-up-form">
-          <h3>Sign-up for the newsletter</h3>
-          <input type="email" placeholder="YourName@domain.com" />
-          <input type="submit" class="button" value="Sign Me Up" />
-          <p><em>We hate spam, too. We promise to keep your email address to ourselves.</em></p>
+    <ul class="table-body unstyled sortable">
+      <li class="table-row table-header">
+        <div class="table-cell">
+          <div class="cell-content">
+            <strong>Name</strong>
+          </div>
+        </div>
+      
+        <div class="table-cell">
+          <div class="cell-content">
+            <strong>Location</strong>
+          </div>
           
         </div>
-        -->
-      </div>
-      <!-- about-us -->
-      <div class="photos">
-        <%= image_tag 'img-tmp.png' %>
-      </div>
       
+        <div class="table-cell">
+          <div class="cell-content">
+            <strong>Price</strong>
+          </div>
+          
+          
+          
+        </div>
       
-    </div>
-  </section>
-    
-  
+        <div class="table-cell">
+          <div class="cell-content">
+            <strong>ID</strong>
+          </div>
+          
+          
+        </div>
+      
+        <div class="table-cell">
+          <div class="cell-content">
+            <strong>Sort</strong>
+          </div>
+          
+          
+          
+        </div>
+      </li>
+      <!-- /table-row /table-header -->
+      
+      <li class="table-row">
+        <div class="table-cell">
+          <div class="cell-content">
+            <strong>Parent</strong>
+          </div>
+          
+        </div>
+        <!-- /table-cell -->
+        
+        <div class="table-cell">
+          <div class="cell-content">
+            <%= lorem.words 5 %>
+          </div>
+        </div>
+        <!-- /table-cell -->
+        
+        <div class="table-cell">
+          <div class="cell-content">
+            $99.99
+          </div>
+          
+        </div>
+        <!-- /table-cell -->
+        
+        <div class="table-cell">
+          <div class="cell-content">
+            #23612
+          </div>
+          
+        </div>
+        <!-- /table-cell -->
+        
+        
+        <div class="table-cell table-actions">
+          <div class="cell-content">
+            <a href="#"><i class="icon-arrow-up"></i></a>
+            <a href="#"><i class="icon-arrow-down"></i></a>
+            <a href="#"><i class="icon-move"></i></a>
+          </div>
+          
+          
+        </div>
+        <!-- /table-cell -->
+        
+        
+        <ul class="sortable">
+          
+          <li class="table-row">
+            <div class="table-cell">
+              <div class="cell-content">
+                <strong>Nested Child</strong>
+              </div>
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                <%= lorem.words 5 %>
+              </div>
+              
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                $99.99
+              </div>
+              
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                #23612
+              </div>
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell table-actions">
+              <div class="cell-content">
+                <a href="#"><i class="icon-arrow-up"></i></a>
+                <a href="#"><i class="icon-arrow-down"></i></a>
+                <a href="#"><i class="icon-move"></i></a>
+              </div>
+            </div>
+            <!-- /table-cell -->
+        
+          </li>
+          
+          
+          
+          <li class="table-row">
+            <div class="table-cell">
+              <div class="cell-content">
+                <strong>Nested Child</strong>
+              </div>
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                <%= lorem.words 5 %>
+              </div>
+              
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                $99.99
+              </div>
+              
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                #23612
+              </div>
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell table-actions">
+              <div class="cell-content">
+                <a href="#"><i class="icon-arrow-up"></i></a>
+                <a href="#"><i class="icon-arrow-down"></i></a>
+                <a href="#"><i class="icon-move"></i></a>
+              </div>
+            </div>
+            <!-- /table-cell -->
+            
+            <ul class="sortable">
+              
+              <li class="table-row">
+                <div class="table-cell">
+                  <div class="cell-content">
+                    <strong>Nested Nested Child</strong>
+                  </div>
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    <%= lorem.words 5 %>
+                  </div>
+              
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    $99.99
+                  </div>
+              
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    #23612
+                  </div>
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell table-actions">
+                  <div class="cell-content">
+                    <a href="#"><i class="icon-arrow-up"></i></a>
+                    <a href="#"><i class="icon-arrow-down"></i></a>
+                    <a href="#"><i class="icon-move"></i></a>
+                  </div>
+                </div>
+                <!-- /table-cell -->
+        
+              </li>
+              
+              
+              
+              <li class="table-row">
+                <div class="table-cell">
+                  <div class="cell-content">
+                    <strong>Nested Nested Child</strong>
+                  </div>
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    <%= lorem.words 5 %>
+                  </div>
+              
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    $99.99
+                  </div>
+              
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    #23612
+                  </div>
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell table-actions">
+                  <div class="cell-content">
+                    <a href="#"><i class="icon-arrow-up"></i></a>
+                    <a href="#"><i class="icon-arrow-down"></i></a>
+                    <a href="#"><i class="icon-move"></i></a>
+                  </div>
+                </div>
+                <!-- /table-cell -->
+                
+                <ul class="sortable">
+                  <% 3.times do %>
+                  <li class="table-row">
+                    <div class="table-cell">
+                      <div class="cell-content">
+                        <strong>Nested Nested Nested Child</strong>
+                      </div>
+                    </div>
+                    <!-- /table-cell -->
+        
+                    <div class="table-cell">
+                      <div class="cell-content">
+                        <%= lorem.words 5 %>
+                      </div>
+              
+                    </div>
+                    <!-- /table-cell -->
+        
+                    <div class="table-cell">
+                      <div class="cell-content">
+                        $99.99
+                      </div>
+              
+                    </div>
+                    <!-- /table-cell -->
+        
+                    <div class="table-cell">
+                      <div class="cell-content">
+                        #23612
+                      </div>
+                    </div>
+                    <!-- /table-cell -->
+        
+                    <div class="table-cell table-actions">
+                      <div class="cell-content">
+                        <a href="#"><i class="icon-arrow-up"></i></a>
+                        <a href="#"><i class="icon-arrow-down"></i></a>
+                        <a href="#"><i class="icon-move"></i></a>
+                      </div>
+                    </div>
+                    <!-- /table-cell -->
+        
+                  </li>
+                  <% end %>
+                </ul>
+                
+              </li>
+              
+              <% 3.times do %>
+              
+              <li class="table-row">
+                <div class="table-cell">
+                  <div class="cell-content">
+                    <strong>Nested Nested Child</strong>
+                  </div>
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    <%= lorem.words 5 %>
+                  </div>
+              
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    $99.99
+                  </div>
+              
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell">
+                  <div class="cell-content">
+                    #23612
+                  </div>
+                </div>
+                <!-- /table-cell -->
+        
+                <div class="table-cell table-actions">
+                  <div class="cell-content">
+                    <a href="#"><i class="icon-arrow-up"></i></a>
+                    <a href="#"><i class="icon-arrow-down"></i></a>
+                    <a href="#"><i class="icon-move"></i></a>
+                  </div>
+                </div>
+                <!-- /table-cell -->
+        
+              </li>
+              
+              <% end %>
+              
+            </ul>
+            
+          </li>
+          
+          
+          
+          
+          <% 3.times do %>
+          
+          <li class="table-row">
+            <div class="table-cell">
+              <div class="cell-content">
+                <strong>Nested Child</strong>
+              </div>
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                <%= lorem.words 5 %>
+              </div>
+              
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                $99.99
+              </div>
+              
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell">
+              <div class="cell-content">
+                #23612
+              </div>
+            </div>
+            <!-- /table-cell -->
+        
+            <div class="table-cell table-actions">
+              <div class="cell-content">
+                <a href="#"><i class="icon-arrow-up"></i></a>
+                <a href="#"><i class="icon-arrow-down"></i></a>
+                <a href="#"><i class="icon-move"></i></a>
+              </div>
+            </div>
+            <!-- /table-cell -->
+        
+          </li>
+          
+          <% end %>
+        </ul>
+        
+        
+      </li>
+      
+      <% 3.times do %>
+      
+      <li class="table-row">
+        <div class="table-cell">
+          
+          <div class="cell-content">
+            <%= lorem.sentences 1 %>
+          </div>
+          
+          
+        </div>
+        <!-- /table-cell -->
+        
+        <div class="table-cell">
+          <div class="cell-content">
+            <%= lorem.words 5 %>
+          </div>
+          
+          
+        </div>
+        <!-- /table-cell -->
+        
+        <div class="table-cell">
+          
+          <div class="cell-content">
+            $99.99
+          </div>
+          
+        </div>
+        <!-- /table-cell -->
+        
+        <div class="table-cell">
+          <div class="cell-content">
+            #23612
+          </div>
+          
+          
+          
+        </div>
+        <!-- /table-cell -->
+        
+        
+        <div class="table-cell table-actions">
+          <div class="cell-content">
+            <a href="#"><i class="icon-arrow-up"></i></a>
+            <a href="#"><i class="icon-arrow-down"></i></a>
+            <a href="#"><i class="icon-move"></i></a>
+            
+          </div>
+          
+          
+        </div>
+        <!-- /table-cell -->
+        
+      </li>
+      
+      <% end %>
+      
+    </ul>
+    <!-- /table-body -->
 
+  </div>
+  <!-- /table-esque -->
+  
 </div>
+<!-- /container -->

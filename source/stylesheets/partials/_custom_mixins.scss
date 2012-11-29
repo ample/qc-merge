@@ -26,23 +26,6 @@
 }
 
 @mixin col-border-left($border-width, $border-color) {
-  border-right: none;
-  border-left: $border-width solid $border-color;
-  @if $border-width == 1px {
-    $marginLeft: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2);
-    $paddingLeft: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - $border-width;
-    padding-left: $paddingLeft;
-    margin-left: $marginLeft;
-  } @else {
-    $paddingLeft: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - ($border-width / 2);
-    $marginLeft: (($gridColumnWidth + ($gridGutterWidth * 2)) / 2) - ($border-width / 2);
-    padding-left: $paddingLeft;
-    margin-left: $marginLeft;
-  }
-} //col-border-right
-
-
-@mixin col-border-right($border-width, $border-color) {
   border-left: none;
   border-right: $border-width solid $border-color;
   @if $border-width == 1px {
@@ -56,41 +39,173 @@
     padding-right: $paddingRight;
     margin-right: $marginRight;
   }
+
 } //col-border-right
 
+
+@mixin col-border-right($border-width, $border-color) {
+  border-left: none;
+  border-right: $border-width solid $border-color;
+  @if $border-width == 1px {
+    $marginRight: ($fluidGridColumnWidth / 2);
+    $paddingRight: (($fluidGridColumnWidth + ($fluidGridGutterWidth * 2)) / 2) - 1%;
+    padding-right: $paddingRight;
+  } @else {
+    $paddingRight: (($fluidGridColumnWidth + ($fluidGridGutterWidth * 2)) / 2) - (1% / 2);
+    $marginRight: ($fluidGridColumnWidth / 2) - ($border-width / 2);
+    padding-right: $paddingRight;
+    margin-right: $marginRight;
+  }
+
+} //col-border-right
+
+
+@mixin fluid-col-border-right($border-width, $border-color) {
+  border-left: none;
+  border-right: $border-width solid $border-color;
+  @if $border-width == 1px {
+    $marginRight: ($fluidGridColumnWidth / 2);
+    $paddingRight: (($fluidGridColumnWidth + ($fluidGridGutterWidth * 2)) / 2) - 1%;
+    padding-right: $paddingRight;
+  } @else {
+    $paddingRight: (($fluidGridColumnWidth + ($fluidGridGutterWidth * 2)) / 2) - (1% / 2);
+    $marginRight: ($fluidGridColumnWidth / 2) - ($border-width / 2);
+    padding-right: $paddingRight;
+    margin-right: $marginRight;
+  }
+} //col-border-right
+
+
 // ------------------------------------------- //
-//    MEDIA QUERIES   												 //
+//    Buttons                                  //
+// ------------------------------------------- //
+
+@mixin create-button($color, $font-color: none, $border-radius: 4px, $icon: none) {
+  
+  // Checks if the background color is lighter than #C9C9C9, if so then change color to #333. If not, color is #FFF
+  $darkbg: lightness($color) < lightness(#C9C9C9);
+  @if $font-color == 'none' {
+    $font-color: if($darkbg, #FFF, #333);
+  }
+  $darkbg: lightness($color) < lightness(#C9C9C9);
+  
+  //Display and sizing configuration
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+  @include box-sizing(border-box);
+  display: inline-block;
+  position: relative;
+  margin-bottom: calc-em(5px, $baseFontSize);
+  -webkit-font-smoothing: antialiased;
+  
+  //Type Configuration
+  color: $font-color;
+  font-family: $baseFontFamily;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-decoration: none;
+  @if $font-color == #FFF {
+    @include text-shadow(rgba(0,0,0,.3) 0 -1px 0);
+  } @else {
+    @include text-shadow(rgba(0,0,0,.08) 0 -1px 0, rgba(255,255,255,1) 0 1px 0);
+  }
+  
+  //Background and Border Configuration
+  @if $icon != 'none' {
+    padding: .35em 1.25em .35em 2.4em;
+    @include background($icon, $color);
+    @include background($icon, linear-gradient($color darken($color, 5%)));
+  } @else {
+    padding: .35em 1.25em;
+    @include background($color);
+    @include background-image(linear-gradient($color darken($color, 15%)));
+  }
+  @include border-radius($border-radius);
+  @include box-shadow((inset rgba(255,255,255, .3) 0 1px 0, rgba(0,0,0,.2) 0 2px 3px));
+  
+  //Border Configuration
+  border: {
+    width: 1px;
+    style: solid;
+    top: {
+      color: darken($color, 15%);
+    }                        
+    right: {                 
+      color: darken($color, 20%);
+    }                        
+    bottom: {                
+      color: darken($color, 20%);
+    }                        
+    left: {                  
+      color: darken($color, 20%);
+    }
+  }
+  
+  //Transition Configuration
+  @include transition-duration(.3s);
+  
+  &:visited {
+    color: $font-color;
+  }
+  
+  &:hover,
+  &:focus,
+  &:active {
+    color: $font-color;
+    //Background and Border Configuration
+    @if $icon != 'none' {
+      border: 1px solid darken($color, 15%);
+      @include background($icon, darken($color, 5%));
+      @include background($icon, linear-gradient(darken($color, 5%) darken($color, 23%)));
+    } @else {
+      border: 1px solid darken($color, 15%);
+      @include background(darken($color, 5%));
+      @include background-image(linear-gradient(darken($color, 5%) darken($color, 23%)));
+    }
+  }
+ 
+  &:active {
+    border: 1px solid darken($color, 23%);
+    color: darken($font-color, 5%);
+    @include box-shadow((inset rgba(0,0,0, .3) 0 1px 4px));
+  }
+}
+
+// ------------------------------------------- //
+//    MEDIA QUERIES                            //
 // ------------------------------------------- //
 
 $breakSmall: 320px;
-$breakMedium: 560px;
-$breakLarge: 940px;
+$breakMedium: 767px;
+$breakLarge: 979px;
+$breakXLarge: 1199px;
 
 @mixin respond-to($media) {
   @if $media == tiny-screens {
-    @media only screen and (max-width: $breakSmall) { @content; }
+    @media (max-width: $breakSmall) { @content; }
   }
   @else if $media == small-screens {
-    @media only screen and (min-width: $breakSmall + 1) { @content; }
+    @media (min-width: $breakSmall + 1) { @content; }
   }
   @else if $media == medium-screens {
-    @media only screen and (min-width: $breakMedium + 1) { @content; }
+    @media (min-width: $breakMedium + 1) { @content; }
   }
   @else if $media == wide-screens {
-    @media only screen and (min-width: $breakLarge) { @content; }
+    @media (min-width: $breakLarge) { @content; }
+  }
+  @else if $media == xwide-screens {
+    @media (min-width: $breakXLarge) { @content; }
   }
 }
 
 @mixin retina-image($width, $height) {
-  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  @media (-webkit-min-device-pixel-ratio: 2) {
     @content;
     -webkit-background-size: $width $height;
   }
 }
 
 
-
-        
 
 // ------------------------------------------- //
 //    GRID BACKGROUND     										 //
@@ -165,13 +280,19 @@ $breakLarge: 940px;
 // ------------------------------------------- //
 
 @mixin replace-text($width, $height, $background-details) {
-  text-indent: 100%;
+  text-indent: -9999px;
   white-space: nowrap;
   overflow: hidden;
   display: block;
   width: $width;
   height: $height;
   background: $background-details;
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 // ------------------------------------------------------ //
@@ -210,7 +331,7 @@ $breakLarge: 940px;
   border: {
   	style: solid;
   	width: 1px;
-  	top: {
+  	top: {  
   		color: #000;
   	}
   	right: {
@@ -226,6 +347,50 @@ $breakLarge: 940px;
 }
 
 // ------------------------------------------- //
+//    Animations      												 //
+// ------------------------------------------- //
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content
+  }
+  @-ms-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
+}
+
+@mixin animation($value) {
+  -webkit-animation: $value;
+  -moz-animation: $value;
+  -ms-animation: $value;
+  -o-animation: $value;
+  animation: $value;
+}
+
+/* Usage 
+**************************************************
+
+@include keyframes(move) {
+  0%   { left: 0; }
+  100% { left: 100px; }
+}
+
+.box {
+  @include animation(move 0.5s ease infinite alternate);
+}
+
+*/
+
+// ------------------------------------------- //
 //    IE-FIXES        												 //
 // ------------------------------------------- //
 @mixin ie-buttonify($width, $height, $image-location) {
@@ -235,4 +400,22 @@ $breakLarge: 940px;
 	height: $height;
 	text-indent: -9999px;
 	@include background(image-url($image-location) no-repeat top left);
+}
+
+@mixin ie7 {
+  * + html & { // Using browser hacks
+    @content;
+  }
+}
+
+@mixin ie8 {
+  html.ie8 & { // Using Paul Irish's conditional comments
+    @content;
+  }
+}
+
+@mixin ie9 {
+  html.ie9 & { // Using Paul Irish's conditional comments
+    @content;
+  }
 }
