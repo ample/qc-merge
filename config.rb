@@ -1,5 +1,4 @@
 require 'compass'
-require 'bootstrap-sass'
 
 # Methods defined in the helpers block are available in templates
 helpers do
