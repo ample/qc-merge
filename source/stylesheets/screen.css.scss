@@ -14,17 +14,8 @@ body {
 }
 
 .container {
-  padding: 0 calc-em(20px);
-  
+  @include container; 
 }
-
-// Sprites
-// --------------------------------------------------
-$icons-spacing: 30px;
-$icons-ico-event-spacing: 40px;
-@import "../images/parts/icons/*.png";
-@include all-icons-sprites;
-
 
 // Typography
 // --------------------------------------------------
