@@ -21,29 +21,48 @@
 </head>
 <body class="<%= page_classes %>">
 
-<header id="site-header" class="site-header">
-</header><!-- site-header -->
 
-<div class="main-content">
+  <div class="building"></div>
+  
+  <header class="site-header">
+    <%= image_tag 'img-logo.png', :class => 'site-logo' %>
+
+    <div class="header-content">
+      <h1><span>Let us go</span> forward together</h1>
+    </div>
+  </header>
+  <!-- /site-header -->
+
+  <div class="main-content">
     <%= yield %>
-</div><!-- /main-content -->
+  </div>
+  <!-- /main-content -->
+  
 
-<footer class="site-footer" id="signup">
-  <div class="footer-content">
-  </div><!-- /footer-content -->
-</footer><!-- /site-footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <section class="social-media">
+        <a class="twitter" href="http://twitter.com/qcmerge"><i class="icon-twitter-sign"></i></a>
+        <a class="facebook" href="http://facebook.com/qcmerge"><i class="icon-facebook-sign"></i></a>
+      </section>
+    </div>
+  </footer>
+  <!-- /site-footer -->
 
-<script>
-  var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
+  
 
-<!--[if lt IE 7 ]>
-  <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-  <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-<![endif]-->
+
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+  <!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
 
 </body>
 </html>

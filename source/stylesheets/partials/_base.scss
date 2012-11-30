@@ -12,11 +12,7 @@ Important Number: 32px (1.778em) @ 1:1.618
 // --------------------------------------------------
 
 // Background
-$backgroundColor:                  #FFF;
-
-// Links
-$linkColor:                        #00b3f6;
-$linkColorHover:                   darken($linkColor, 15%);
+$backgroundColor:                  #000;
 
 // Grays
 $black:                            #000;
@@ -34,15 +30,20 @@ $green:                            #46a546;
 $red:                              #9d261d;
 $yellow:                           #ffc40d;
 $orange:                           #f89406;
-$pink:                             #c3325f;
+$pink:                             #EA078B;
 $purple:                           #7a43b6;
-      
+
+// Links
+$linkColor:                        $pink;
+$linkColorHover:                   darken($linkColor, 15%);
+
 // Typography                    
 $baseFontSize:                     15px;
-$baseFontFamily:                   "museo-sans", Helvetica, Arial, sans-serif;
-$baseLineHeight:                   22px;
-$textColor:                        #0F0F0F;
-$headlineTextColor:                #00b3f6;
+$baseFontFamily:                   "droid-serif", Georgia, serif;
+$headlineFontFamily:               "franklin-gothic-urw-comp", "Arial Narrow", Helvetica, Arial, sans-serif;
+$altHeadlineFontFamily:            "franklin-gothic-ext-comp-urw", sans-serif;
+$baseLineHeight:                   1.5em;
+$textColor:                        $black;
 
 // Buttons                         
 $primaryButtonBackground:          $linkColor;
@@ -60,8 +61,8 @@ $placeholderText:                 $grayLight;
 // GRID
 // --------------------------------------------------
 
-$total-cols:                       12;
-$col-width:                        5em; // Loosely taken from modular scale
+$total-columns:                    12;
+$column-width:                     4em; // Loosely taken from modular scale
 $gutter-width:                     1em;
 $side-gutter-width:                1em; // Loosely taken from modular scale
 
