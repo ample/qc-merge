@@ -217,7 +217,8 @@ p {
     display: block;
     text-transform: uppercase;
   }
-  input {
+  input[type='text'],
+  input[type='email'] {
     width: 70%;
     text-align: center;
     font-family: $baseFontFamily;
@@ -243,7 +244,7 @@ p {
       font-style: italic;
     } 
   } //input
-  button {
+  .button {
     @extend %fixz;
     border: none;
     color: $white;
